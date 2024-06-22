@@ -8,8 +8,10 @@
 	<head>
 		<title>Virat Dwivedi Portfolio</title>
 		<meta charset="utf-8" />
+		r
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		
 	</head>
 	<body class="is-preload">
 
@@ -24,7 +26,18 @@
 							<h1 id="title">Virat Dwivedi </h1>
 							<p>CSE Student at VIT</p>
 						</div>
-
+						<div class="container" id="container">
+							<button onclick="toggleDarkMode()">  <span class="toggle-symbol"></span></button>
+						 </div>
+						 
+						 <script>
+							 function toggleDarkMode() {
+							   const body = document.body;
+							   const container = document.getElementById('container');
+							   body.classList.toggle('dark-mode');
+							   container.classList.toggle('dark-mode');
+							  }
+						 </script>
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>

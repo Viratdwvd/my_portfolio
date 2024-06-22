@@ -5,7 +5,41 @@
 	Prologue by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+*/<style>   
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.2s ease;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(215, 42, 42, 0.1);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dark-mode {
+    background-color: #222729;
+    color: #ffffff;
+}
+.dark-mode .container {
+    background-color: #2227;
+    color: #ffffff;
+}
+.dark-mode button {
+    background-color: #444444;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.dark-mode .toggle-symbol::after {
+    content: "🌞"; /* Sun symbol */
+    margin-left: 0.5px;
+}
+.toggle-symbol::after {
+    content: "🌙"; /* Moon symbol */
+    margin-left: 0.5px;
+}
+  </style>
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -1987,12 +2021,13 @@ input, select, textarea {
 		.item header {
 			background: #fff;
 			margin: 0;
-			padding: 1em 0 1em 0;
+			padding: em 0 1em 0;
 			font-size: 0.8em;
 		}
 
 			.item header h3 {
 				font-size: 1em;
+				font-family :cursive;
 			}
 
 /* Icons */
