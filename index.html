@@ -182,7 +182,7 @@
 								 If you have any questions, opportunities, or just want to say hello, please don't hesitate to reach out. 
 								 You can contact me via email  or fill out the form below. 
 								I look forward to hearing from you!
-							<form method="post" action="#">
+							<form method="post" action="#" name="submit-to-google-sheet">
 								<div class="row">
 									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
 									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
@@ -199,6 +199,17 @@
 					</section>
 
 			</div>
+		<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxAV-lM0x0w0T99-86uypAsbf1yJBR4_CNLxeyNC0sSjsED3Y7uqrr8DTCXEDzlw5ad/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
 		<!-- Footer -->
 			<div id="footer">
